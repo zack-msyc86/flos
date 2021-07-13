@@ -1,0 +1,15 @@
+version: '3'
+services:
+
+  viola:
+    build: ./dockerfile/Dockerfile.viola
+    volumes:
+      - ./viola:/go/src/viola
+
+  # hedera:
+  #   image: golang:latest
+  #   volumes:
+  #   - ./hedera:/hedera
+
+  db:
+    image: postgres:latest

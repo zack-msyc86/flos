@@ -1,0 +1,8 @@
+FROM golang:alpine
+
+WORKDIR /go/src/viola
+
+RUN curl -fLo /go/bin/air https://git.io/linux_air \
+  && chmod +x /go/bin/air
+
+CMD air
